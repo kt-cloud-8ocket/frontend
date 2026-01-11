@@ -12,10 +12,3 @@ export {
 } from "./Card";
 export { Input } from "./Input";
 export { Section } from "./Section";
-export { Tabs, TabsList, TabsTrigger, TabsContent } from "./tabs";
-export {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from "./accordion";
