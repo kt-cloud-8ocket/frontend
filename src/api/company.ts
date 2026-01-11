@@ -1,15 +1,26 @@
 // Company API
 
+import { mockCompanies } from "@/mocks/companies";
 import apiClient from "./client";
 import type { Company, ApiResponse } from "@/types";
 
+const USE_MOCK = import.meta.env.VITE_USE_MOCK === "true";
+
 export const companyApi = {
   // 회사 목록 조회
-  getAll: () => apiClient.get<ApiResponse<Company[]>>("/api/companies"),
+  getAll: (): Promise<ApiResponse<Company[]>> =>
+    USE_MOCK
+      ? Promise.resolve({ success: true, data: mockCompanies })
+      : apiClient.get("/api/companies"),
 
   // 회사 상세 조회
   getById: (id: number) =>
-    apiClient.get<ApiResponse<Company>>(`/api/companies/${id}`),
+    USE_MOCK
+      ? Promise.resolve({
+          success: true,
+          data: mockCompanies.find((company) => company.id === id) || null,
+        })
+      : apiClient.get<ApiResponse<Company>>(`/api/companies/${id}`),
 
   // 회사 생성
   create: (data: Omit<Company, "id" | "createdAt" | "updatedAt">) =>

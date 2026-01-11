@@ -2,20 +2,38 @@
 
 import apiClient from "./client";
 import type { Service, ApiResponse } from "@/types";
+import { mockServices } from "@/mocks/services";
+
+const USE_MOCK = import.meta.env.VITE_USE_MOCK === "true";
 
 export const serviceApi = {
   // 서비스 목록 조회
-  getAll: () => apiClient.get<ApiResponse<Service[]>>("/api/services"),
+  getAll: (): Promise<ApiResponse<Service[]>> =>
+    USE_MOCK
+      ? Promise.resolve({ success: true, data: mockServices })
+      : apiClient.get("/api/services"),
 
   // 회사별 서비스 목록 조회
   getByCompanyId: (companyId: number) =>
-    apiClient.get<ApiResponse<Service[]>>(
-      `/api/companies/${companyId}/services`
-    ),
+    USE_MOCK
+      ? Promise.resolve({
+          success: true,
+          data: mockServices.filter(
+            (service) => service.companyId === companyId
+          ),
+        })
+      : apiClient.get<ApiResponse<Service[]>>(
+          `/api/companies/${companyId}/services`
+        ),
 
   // 서비스 상세 조회
   getById: (id: number) =>
-    apiClient.get<ApiResponse<Service>>(`/api/services/${id}`),
+    USE_MOCK
+      ? Promise.resolve({
+          success: true,
+          data: mockServices.find((service) => service.id === id) || null,
+        })
+      : apiClient.get<ApiResponse<Service>>(`/api/services/${id}`),
 
   // 서비스 생성
   create: (data: Omit<Service, "id" | "createdAt" | "updatedAt">) =>

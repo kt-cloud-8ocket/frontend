@@ -2,18 +2,36 @@
 
 import apiClient from "./client";
 import type { Worker, ApiResponse } from "@/types";
+import { mockWorkers } from "@/mocks/workers";
+
+const USE_MOCK = import.meta.env.VITE_USE_MOCK === "true";
 
 export const workerApi = {
   // 워커 목록 조회
-  getAll: () => apiClient.get<ApiResponse<Worker[]>>("/api/workers"),
+  getAll: (): Promise<ApiResponse<Worker[]>> =>
+    USE_MOCK
+      ? Promise.resolve({ success: true, data: mockWorkers })
+      : apiClient.get("/api/workers"),
 
   // 회사별 워커 목록 조회
   getByCompanyId: (companyId: number) =>
-    apiClient.get<ApiResponse<Worker[]>>(`/api/companies/${companyId}/workers`),
+    USE_MOCK
+      ? Promise.resolve({
+          success: true,
+          data: mockWorkers.filter((w) => w.companyId === companyId),
+        })
+      : apiClient.get<ApiResponse<Worker[]>>(
+          `/api/companies/${companyId}/workers`
+        ),
 
   // 워커 상세 조회
   getById: (id: number) =>
-    apiClient.get<ApiResponse<Worker>>(`/api/workers/${id}`),
+    USE_MOCK
+      ? Promise.resolve({
+          success: true,
+          data: mockWorkers.find((w) => w.id === id) || null,
+        })
+      : apiClient.get<ApiResponse<Worker>>(`/api/workers/${id}`),
 
   // 워커 생성
   create: (data: Omit<Worker, "id" | "createdAt" | "updatedAt">) =>
