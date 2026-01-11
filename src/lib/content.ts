@@ -57,3 +57,28 @@ export const aboutContent = {
     items: [{ year: "2024", event: "회사 설립" }],
   },
 };
+
+export const contactContent = {
+  hero: {
+    title: "문의하기",
+    subtitle: "궁금한 점이 있으시면 언제든 문의해주세요",
+  },
+
+  form: {
+    fields: {
+      name: { label: "이름", placeholder: "이름을 입력하세요" },
+      email: { label: "이메일", placeholder: "이메일을 입력하세요" },
+      message: { label: "문의 내용", placeholder: "문의 내용을 입력하세요" },
+    },
+    submitButton: "제출하기",
+  },
+
+  info: {
+    title: "연락처 정보",
+    items: [
+      { icon: "📧", label: "이메일", value: "contact@8ocket.com" },
+      { icon: "📞", label: "전화", value: "02-1234-5678" },
+      { icon: "📍", label: "주소", value: "서울시 강남구" },
+    ],
+  },
+};

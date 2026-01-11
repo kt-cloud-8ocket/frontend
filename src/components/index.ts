@@ -4,5 +4,6 @@ export * from "./ui";
 export * from "./home";
 export * from "./layout";
 export * from "./company";
+export * from "./contact";
 export * from "./service";
 export * from "./worker";
