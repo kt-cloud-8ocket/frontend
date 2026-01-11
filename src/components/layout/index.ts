@@ -1,0 +1,5 @@
+// 레이아웃 컴포넌트 통합 내보내기
+
+export { Header } from "./Header";
+export { Footer } from "./Footer";
+export { Layout } from "./Layout";
