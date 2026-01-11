@@ -1,12 +1,12 @@
 // 홈 페이지
-import { HeroSection, ServiceSection, AboutSection } from "@/components/home";
+import { HomeHero, HomeServices, HomeAbout } from "@/components/home";
 
 export function HomePage() {
   return (
     <>
-      <HeroSection />
-      <ServiceSection />
-      <AboutSection />
+      <HomeHero />
+      <HomeServices />
+      <HomeAbout />
     </>
   );
 }

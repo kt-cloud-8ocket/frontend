@@ -7,7 +7,7 @@ import {
 } from "@/components/ui";
 import { homeContent } from "@/lib";
 
-export function ServiceSection() {
+export function HomeServices() {
   const { services } = homeContent;
   return (
     <Section spacing="lg">

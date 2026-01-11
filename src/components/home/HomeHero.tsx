@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button, Section } from "@/components/ui";
 import { homeContent } from "@/lib";
 
-export function HeroSection() {
+export function HomeHero() {
   const { hero } = homeContent;
 
   return (
