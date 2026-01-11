@@ -1,27 +1,28 @@
 // 홈 페이지
 
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui";
 
 export function HomePage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-8">
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
-          8ocket에 오신 것을 환영합니다
-        </h1>
-        <p className="text-xl text-muted-foreground max-w-2xl">
-          혁신적인 스타트업과 서비스를 한눈에 확인하세요
-        </p>
-      </div>
-      <div className="flex gap-4">
-        <Button asChild size="lg">
-          <Link to="/companies">회사 둘러보기</Link>
-        </Button>
-        <Button asChild variant="outline" size="lg">
-          <Link to="/services">서비스 보기</Link>
-        </Button>
-      </div>
-    </div>
+    // 섹션 구성 예시
+    <>
+      {/* Hero */}
+      <section className="py-20 text-center">
+        <h1 className="text-4xl font-bold">타이틀</h1>
+        <p className="text-muted-foreground mt-4">설명</p>
+        <Button className="mt-8">CTA</Button>
+      </section>
+
+      {/* 서비스 소개 */}
+      <section className="py-16 bg-muted/30">
+        <div className="container">
+          <h2 className="text-2xl font-bold text-center mb-8">서비스</h2>
+          <div className="grid md:grid-cols-3 gap-6">{/* Card들 */}</div>
+        </div>
+      </section>
+
+      {/* 회사 소개 요약 */}
+      <section className="py-16">...</section>
+    </>
   );
 }

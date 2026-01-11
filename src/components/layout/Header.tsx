@@ -1,35 +1,60 @@
 // 헤더 레이아웃 컴포넌트
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { Button } from "@/components/ui";
 
 export function Header() {
+  const location = useLocation();
+
+  const isActive = (path: string) => {
+    return (
+      location.pathname === path || location.pathname.startsWith(path + "/")
+    );
+  };
+
+  const navLinks = [
+    { to: "/about", label: "회사소개" },
+    { to: "/services", label: "서비스" },
+    { to: "/contact", label: "문의하기" },
+  ];
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center">
-        <div className="mr-4 flex">
-          <Link to="/" className="mr-6 flex items-center space-x-2">
-            <span className="font-bold">8ocket</span>
-          </Link>
-          <nav className="flex items-center space-x-6 text-sm font-medium">
+      <div className="container flex h-16 items-center justify-between">
+        {/* 로고 */}
+        <Link
+          to="/"
+          className="flex items-center space-x-2 text-xl font-bold text-primary hover:opacity-80 transition-opacity"
+        >
+          <span className="bg-primary text-primary-foreground px-2 py-1 rounded-md">
+            8
+          </span>
+          <span>ocket</span>
+        </Link>
+
+        {/* 네비게이션 */}
+        <nav className="hidden md:flex items-center space-x-8">
+          {navLinks.map((link) => (
             <Link
-              to="/companies"
-              className="transition-colors hover:text-foreground/80"
+              key={link.to}
+              to={link.to}
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActive(link.to) ? "text-primary" : "text-muted-foreground"
+              }`}
             >
-              회사
+              {link.label}
             </Link>
-            <Link
-              to="/services"
-              className="transition-colors hover:text-foreground/80"
-            >
-              서비스
-            </Link>
-            <Link
-              to="/workers"
-              className="transition-colors hover:text-foreground/80"
-            >
-              팀원
-            </Link>
-          </nav>
+          ))}
+        </nav>
+
+        {/* CTA 버튼 */}
+        <div className="flex items-center space-x-4">
+          <Button variant="outline" size="sm" asChild>
+            <Link to="/contact">문의하기</Link>
+          </Button>
+          <Button size="sm" asChild>
+            <Link to="/services">시작하기</Link>
+          </Button>
         </div>
       </div>
     </header>

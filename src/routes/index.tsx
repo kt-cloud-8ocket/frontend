@@ -5,6 +5,8 @@ import { Layout } from "@/components/layout";
 import {
   HomePage,
   NotFoundPage,
+  AboutPage,
+  ContactPage,
   CompanyListPage,
   CompanyDetailPage,
   ServiceListPage,
@@ -19,6 +21,14 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage />,
+      },
+      {
+        path: "about",
+        element: <AboutPage />,
+      },
+      {
+        path: "contact",
+        element: <ContactPage />,
       },
       {
         path: "companies",
