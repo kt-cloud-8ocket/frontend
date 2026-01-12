@@ -1,13 +1,7 @@
 // components/service/ServiceDetailPage.tsx
 import { useParams, Link } from "react-router-dom";
 import { useService } from "@/hooks";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-  Button,
-} from "@/components/ui";
+import { Card, CardHeader, CardTitle, CardContent, Button } from "@/components/ui";
 import { ArrowLeft } from "lucide-react";
 
 export function ServiceDetailPage() {
@@ -45,7 +39,7 @@ export function ServiceDetailPage() {
               </Link>
             </Button>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-              {service.title}
+              {service.name}
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mt-4 leading-relaxed">
               {service.description}
@@ -57,48 +51,49 @@ export function ServiceDetailPage() {
       {/* 상세 정보 섹션 */}
       <section className="py-12 md:py-16">
         <div className="container">
-          <div className="max-w-4xl mx-auto space-y-8">
-            {service.features && service.features.length > 0 && (
+          <div className="max-w-4xl mx-auto">
+            <div className="grid gap-6 md:grid-cols-2">
+              <Card>
+                <CardHeader>
+                  <CardTitle>해결 문제</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {service.problem || "정보 없음"}
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>타겟 고객</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {service.target || "정보 없음"}
+                  </p>
+                </CardContent>
+              </Card>
               <Card>
                 <CardHeader>
                   <CardTitle>주요 기능</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, index) => (
-                      <li
-                        key={index}
-                        className="flex items-start gap-2 text-muted-foreground"
-                      >
-                        <span className="text-primary mt-1">•</span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {service.features || "정보 없음"}
+                  </p>
                 </CardContent>
               </Card>
-            )}
-
-            {service.benefits && service.benefits.length > 0 && (
               <Card>
                 <CardHeader>
-                  <CardTitle>기대 효과</CardTitle>
+                  <CardTitle>차별점</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2">
-                    {service.benefits.map((benefit, index) => (
-                      <li
-                        key={index}
-                        className="flex items-start gap-2 text-muted-foreground"
-                      >
-                        <span className="text-primary mt-1">•</span>
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {service.uniquePoints || "정보 없음"}
+                  </p>
                 </CardContent>
               </Card>
-            )}
+            </div>
           </div>
         </div>
       </section>
