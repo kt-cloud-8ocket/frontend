@@ -1,5 +1,6 @@
 // components/faq/FAQList.tsx
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Accordion,
   AccordionContent,
@@ -234,9 +235,12 @@ export function FAQList() {
             <p className="text-sm text-muted-foreground">
               더 자세한 내용은 문의하기를 통해 확인하실 수 있습니다.
             </p>
-            <button className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors">
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+            >
               문의하기
-            </button>
+            </Link>
           </div>
         </div>
       </div>

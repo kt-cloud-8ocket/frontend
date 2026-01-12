@@ -35,6 +35,11 @@ export const homeContent = {
     title: "왜 VendiChef 인가요?",
     description:
       "자판기를 단순 판매 채널이 아닌 데이터 수집 노드로 활용해, 수요와 공급을 정확하게 연결합니다.",
+    highlights: [
+      { icon: "Database", label: "실시간 데이터", desc: "판매·재고 즉시 수집" },
+      { icon: "Users", label: "양방향 가치", desc: "소비자 + 제조사 연결" },
+      { icon: "Target", label: "정확한 예측", desc: "AI 기반 수요 분석" },
+    ],
     cta: { label: "더 알아보기", href: "/about" },
   },
 };

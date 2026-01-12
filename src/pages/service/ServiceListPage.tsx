@@ -3,8 +3,12 @@ import { mockServices } from "@/mocks/services";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export function ServiceListPage() {
-  const consumerServices = mockServices.filter((s) => s.category === "consumer");
-  const businessServices = mockServices.filter((s) => s.category === "business");
+  const consumerServices = mockServices.filter(
+    (s) => s.category === "consumer"
+  );
+  const businessServices = mockServices.filter(
+    (s) => s.category === "business"
+  );
 
   return (
     <>

@@ -6,16 +6,16 @@
 @theme {
   /* 커스텀 브랜드 색상 */
   --color-primary: #245641;
-  --color-primary-foreground: #FCF9E0;
-  --color-secondary: #FCF9E0;
+  --color-primary-foreground: #fcf9e0;
+  --color-secondary: #fcf9e0;
   --color-secondary-foreground: #245641;
-  --color-tertiary: #E26931;
-  --color-tertiary-foreground: #FCF9E0;
-  --color-quinary: #D5F466;
+  --color-tertiary: #e26931;
+  --color-tertiary-foreground: #fcf9e0;
+  --color-quinary: #d5f466;
   --color-quinary-foreground: #245641;
 
   /* 기본 색상 */
-  --color-background: #FCF9E0;
+  --color-background: #fcf9e0;
   --color-foreground: #245641;
   --color-card: #ffffff;
   --color-card-foreground: #245641;
@@ -23,10 +23,10 @@
   --color-popover-foreground: #245641;
   --color-muted: #f5f2d8;
   --color-muted-foreground: #5a7a6a;
-  --color-accent: #D5F466;
+  --color-accent: #d5f466;
   --color-accent-foreground: #245641;
-  --color-destructive: #E26931;
-  --color-destructive-foreground: #FCF9E0;
+  --color-destructive: #e26931;
+  --color-destructive-foreground: #fcf9e0;
   --color-border: #d4d1b8;
   --color-input: #d4d1b8;
   --color-ring: #245641;
@@ -45,24 +45,24 @@
 /* 다크모드 */
 .dark {
   --color-background: #1a3d2e;
-  --color-foreground: #FCF9E0;
+  --color-foreground: #fcf9e0;
   --color-card: #245641;
-  --color-card-foreground: #FCF9E0;
+  --color-card-foreground: #fcf9e0;
   --color-popover: #245641;
-  --color-popover-foreground: #FCF9E0;
-  --color-primary: #D5F466;
+  --color-popover-foreground: #fcf9e0;
+  --color-primary: #d5f466;
   --color-primary-foreground: #245641;
   --color-secondary: #2d6a52;
-  --color-secondary-foreground: #FCF9E0;
+  --color-secondary-foreground: #fcf9e0;
   --color-muted: #2d6a52;
   --color-muted-foreground: #b8d4c5;
-  --color-accent: #E26931;
-  --color-accent-foreground: #FCF9E0;
-  --color-destructive: #E26931;
-  --color-destructive-foreground: #FCF9E0;
+  --color-accent: #e26931;
+  --color-accent-foreground: #fcf9e0;
+  --color-destructive: #e26931;
+  --color-destructive-foreground: #fcf9e0;
   --color-border: #3d7a62;
   --color-input: #3d7a62;
-  --color-ring: #D5F466;
+  --color-ring: #d5f466;
 }
 
 /* 기본 스타일 */

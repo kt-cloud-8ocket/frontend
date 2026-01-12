@@ -14,7 +14,7 @@ export function AboutVisionMission() {
             <h2 className="text-3xl md:text-4xl font-bold">
               {visionMission.title}
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-muted-foreground mx-auto leading-relaxed">
               {visionMission.description}
             </p>
           </div>
