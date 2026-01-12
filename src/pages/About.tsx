@@ -1,8 +1,8 @@
 import {
   AboutHero,
-  AboutHistory,
-  AboutValues,
   AboutVisionMission,
+  AboutValues,
+  AboutHistory,
 } from "@/components/about";
 
 export function AboutPage() {

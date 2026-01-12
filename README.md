@@ -1,4 +1,4 @@
-# VendiChef Frontend
+#VendiChef Frontend
 
 > 🍱 도시락 자판기 데이터로 식사와 생산을 연결하는 플랫폼
 

@@ -27,7 +27,7 @@ export function Header() {
           to="/"
           className="flex items-center space-x-2 text-xl font-bold text-primary hover:opacity-80 transition-opacity"
         >
-          <span>🍱 VendiChef</span>
+          <span>🍱VendiChef</span>
         </Link>
 
         {/* 네비게이션 */}

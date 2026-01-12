@@ -31,7 +31,7 @@ export const homeContent = {
   },
 
   about: {
-    title: "왜 VendiChef인가요?",
+    title: "왜VendiChef인가요?",
     description:
       "자판기를 단순 판매 채널이 아닌 데이터 수집 노드로 활용해, 수요와 공급을 정확하게 연결합니다.",
     cta: { label: "더 알아보기", href: "/about" },
@@ -40,47 +40,67 @@ export const homeContent = {
 
 export const aboutContent = {
   hero: {
-    title: "회사 소개",
-    subtitle: "도시락 자판기 데이터로 식사와 생산을 연결하는 플랫폼",
+    title: "VendiChef",
+    subtitle:
+      "도시락을 파는 회사가 아니라,\n식사와 생산을 데이터로 연결하는 플랫폼",
   },
 
-  vision: {
-    icon: "🎯",
-    title: "비전",
-    description: "데이터로 지속 가능한 식사와 생산 인프라를 만든다",
+  visionMission: {
+    title: "왜 벤디셰프를 만들었나요?",
+    description:
+      "우리는 도시락 구매가 단순한 소비가 아니라 시간·돈·건강·습관을 좌우하는 반복 행동이라는 점에 주목했습니다.",
+    consumer: {
+      title: "소비자의 문제",
+      items: [
+        "편의점 중심 구매 구조로 인한 충동 소비",
+        "자극적인 식단으로 건강 관리 어려움",
+        "식사 선택에 불필요한 시간 소모",
+      ],
+    },
+    manufacturer: {
+      title: "제조사의 문제",
+      items: [
+        "수요 예측 실패로 인한 과잉 생산",
+        "높은 폐기 비용",
+        "제품 판매 데이터 부재",
+      ],
+    },
+    solution:
+      "자판기에서 발생하는 데이터를 생산과 연결하는 플랫폼을 기획했습니다.\n소비자는 더 나은 선택을, 제조사는 정확한 생산 계획을 얻게 됩니다.",
   },
 
-  mission: {
-    icon: "🚀",
-    title: "미션",
-    description: "개인에게는 건강한 식습관을, 제조사에게는 예측 가능한 생산을",
+  background: {
+    content: `우리는 도시락 구매가 단순한 소비가 아니라 시간·돈·건강·습관을 좌우하는 반복 행동이라는 점에 주목했습니다.
+
+동시에 식품 제조사는 수요를 예측하지 못해 과잉 생산과 폐기를 반복하고 있었습니다.
+
+이 두 문제를 동시에 해결하기 위해, 자판기에서 발생하는 데이터를 생산과 연결하는 플랫폼을 기획했습니다.`,
   },
 
-  values: {
-    title: "핵심 가치",
+  strengths: {
+    title: "핵심 강점",
     items: [
       {
-        title: "간결한 선택",
-        description: "선택은 단순하게, 실행은 빠르게",
+        icon: "Users",
+        title: "양면 문제 정의",
+        description: "문제를 개인(B2C)과 공장(B2B) 관점에서 동시에 정의",
       },
       {
-        title: "데이터 중심",
-        description: "직감이 아닌 데이터로 판단",
+        icon: "Workflow",
+        title: "데이터 중심 설계",
+        description: "데이터 흐름 중심의 서비스·플랫폼 기획",
       },
       {
-        title: "동반 성장",
-        description: "거래가 아닌 파트너십",
-      },
-      {
-        title: "지속 가능성",
-        description: "반복 가능하고 확장 가능한 구조",
+        icon: "Boxes",
+        title: "확장 가능한 구조",
+        description: "IoT·인프라 구조를 고려한 확장 가능한 설계 사고",
       },
     ],
   },
 
   history: {
     title: "연혁",
-    items: [{ year: "2026", event: "VendiChef 팀 결성" }],
+    items: [{ year: "2026", event: "VendiChef(VendiChef) 팀 결성" }],
   },
 
   story: {
@@ -102,24 +122,6 @@ export const aboutContent = {
   brandMessage: {
     title: "브랜드 메시지",
     message: "빠르고 건강한 한 끼를,\n데이터로 지속 가능하게.",
-  },
-
-  strengths: {
-    title: "팀의 강점",
-    items: [
-      {
-        title: "문제 정의",
-        description: "B2C와 B2B 관점을 동시에 고려",
-      },
-      {
-        title: "서비스 기획",
-        description: "데이터 흐름 중심 플랫폼 설계",
-      },
-      {
-        title: "확장성 설계",
-        description: "IoT 인프라 기반 확장 가능한 구조",
-      },
-    ],
   },
 };
 
