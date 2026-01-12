@@ -12,3 +12,4 @@ export {
 } from "./Card";
 export { Input } from "./Input";
 export { Section } from "./Section";
+export { Tabs, TabsList, TabsTrigger, TabsContent } from "./tabs";

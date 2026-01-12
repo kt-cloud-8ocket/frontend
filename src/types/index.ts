@@ -17,14 +17,14 @@ export interface Company extends BaseEntity {
 }
 
 // Service 도메인
-export interface Service extends BaseEntity {
-  name: string;
-  problem: string;
-  target: string;
+export interface Service {
+  id: string;
+  category: "consumer" | "business";
+  title: string;
   description: string;
-  features: string;
-  uniquePoints: string;
-  companyId: number;
+  icon?: string; // lucide-react 아이콘 이름
+  features?: string[];
+  benefits?: string[];
 }
 
 // Business 도메인
