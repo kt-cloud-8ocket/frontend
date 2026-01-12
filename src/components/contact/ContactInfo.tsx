@@ -43,8 +43,7 @@ export function ContactInfo() {
       <Card className="bg-primary/5 border-primary/20">
         <CardContent className="pt-6">
           <p className="text-sm text-muted-foreground leading-relaxed">
-            제조사 파트너십, 자판기 설치, 투자 관련 문의는 담당자가 24시간 내에
-            연락드립니다.
+            파트너십·설치·투자 문의는 24시간 내 연락드립니다.
           </p>
         </CardContent>
       </Card>
