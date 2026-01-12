@@ -63,6 +63,20 @@ export interface Worker extends BaseEntity {
   companyId: number;
 }
 
+// FAQ 도메인
+export interface FAQ {
+  id: string;
+  category: "service" | "consumer" | "business" | "data" | "partnership";
+  question: string;
+  answer: string;
+}
+
+export interface FAQCategory {
+  id: string;
+  label: string;
+  description: string;
+}
+
 // API 응답 타입
 export interface ApiResponse<T> {
   success: boolean;

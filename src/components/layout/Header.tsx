@@ -1,6 +1,7 @@
 // 헤더 레이아웃 컴포넌트
 
 import { Link, useLocation } from "react-router-dom";
+import { Leaf } from "lucide-react";
 import { Button } from "@/components/ui";
 
 export function Header() {
@@ -13,23 +14,22 @@ export function Header() {
   };
 
   const navLinks = [
+    { to: "/", label: "홈" },
     { to: "/about", label: "회사소개" },
     { to: "/services", label: "서비스" },
     { to: "/contact", label: "문의하기" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
+    <header className="sticky top-0 z-50 w-full h-[var(--header-height)] border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-full items-center justify-between">
         {/* 로고 */}
         <Link
           to="/"
           className="flex items-center space-x-2 text-xl font-bold text-primary hover:opacity-80 transition-opacity"
         >
-          <span className="bg-primary text-primary-foreground px-2 py-1 rounded-md">
-            8
-          </span>
-          <span>ocket</span>
+          <Leaf className="w-6 h-6" />
+          <span>VendiChef</span>
         </Link>
 
         {/* 네비게이션 */}

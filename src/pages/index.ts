@@ -4,7 +4,6 @@ export { HomePage } from "./Home";
 export { AboutPage } from "./About";
 export { NotFoundPage } from "./NotFound";
 export { ContactPage } from "./Contact";
-export { PrivacyPage } from "./Privacy";
-export { TermsPage } from "./Terms";
+export { FAQPage } from "./FAQ";
 export * from "./company";
 export * from "./service";

@@ -1,6 +1,7 @@
 // 푸터 레이아웃 컴포넌트
 
 import { Link } from "react-router-dom";
+import { Leaf } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -21,23 +22,24 @@ export function Footer() {
   };
 
   return (
-    <footer className="border-t bg-muted/30">
+    <footer className="mt-auto border-t bg-muted/30">
       {/* 메인 푸터 */}
       <div className="container py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* 회사 정보 */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center space-x-2 text-lg font-bold">
-              <span className="bg-primary text-primary-foreground px-2 py-1 rounded-md text-sm">
-                8
-              </span>
-              <span>ocket</span>
+            <Link
+              to="/"
+              className="flex items-center space-x-2 text-lg font-bold"
+            >
+              <Leaf className="w-5 h-5" />
+              <span>VendiChef</span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              혁신적인 기술로 더 나은 미래를 만들어갑니다.
+              식사와 생산을 데이터로 연결하는 플랫폼
             </p>
             <div className="text-sm text-muted-foreground space-y-1">
-              <p>📧 contact@8ocket.com</p>
+              <p>📧 contact@vendichef.com</p>
               <p>📞 02-1234-5678</p>
             </div>
           </div>
@@ -67,10 +69,13 @@ export function Footer() {
       <div className="border-t">
         <div className="container py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            &copy; {currentYear} 8ocket. All rights reserved.
+            &copy; {currentYear}VendiChef. All rights reserved.
           </p>
           <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-            <Link to="/privacy" className="hover:text-primary transition-colors">
+            <Link
+              to="/privacy"
+              className="hover:text-primary transition-colors"
+            >
               개인정보처리방침
             </Link>
             <span>|</span>

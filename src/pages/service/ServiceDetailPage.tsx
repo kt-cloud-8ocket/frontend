@@ -1,8 +1,14 @@
-// 서비스 상세 페이지
-
-import { useParams } from "react-router-dom";
+// components/service/ServiceDetailPage.tsx
+import { useParams, Link } from "react-router-dom";
 import { useService } from "@/hooks";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  Button,
+} from "@/components/ui";
+import { ArrowLeft } from "lucide-react";
 
 export function ServiceDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -27,46 +33,75 @@ export function ServiceDetailPage() {
   }
 
   return (
-    <div className="space-y-8">
-      <div>
-        <h1 className="text-3xl font-bold tracking-tight">{service.name}</h1>
-        <p className="text-muted-foreground mt-2">{service.description}</p>
-      </div>
+    <>
+      {/* Hero 섹션 */}
+      <section className="relative py-16 md:py-24 bg-gradient-to-b from-background to-muted/30">
+        <div className="container">
+          <div className="max-w-3xl mx-auto">
+            <Button variant="ghost" size="sm" asChild className="mb-6">
+              <Link to="/services" className="gap-2">
+                <ArrowLeft className="w-4 h-4" />
+                서비스 목록
+              </Link>
+            </Button>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+              {service.title}
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground mt-4 leading-relaxed">
+              {service.description}
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <div className="grid gap-6 md:grid-cols-2">
-        <Card>
-          <CardHeader>
-            <CardTitle>해결 문제</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p>{service.problem || "정보 없음"}</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle>타겟 고객</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p>{service.target || "정보 없음"}</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle>주요 기능</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p>{service.features || "정보 없음"}</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle>차별점</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p>{service.uniquePoints || "정보 없음"}</p>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
+      {/* 상세 정보 섹션 */}
+      <section className="py-12 md:py-16">
+        <div className="container">
+          <div className="max-w-4xl mx-auto space-y-8">
+            {service.features && service.features.length > 0 && (
+              <Card>
+                <CardHeader>
+                  <CardTitle>주요 기능</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, index) => (
+                      <li
+                        key={index}
+                        className="flex items-start gap-2 text-muted-foreground"
+                      >
+                        <span className="text-primary mt-1">•</span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            )}
+
+            {service.benefits && service.benefits.length > 0 && (
+              <Card>
+                <CardHeader>
+                  <CardTitle>기대 효과</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    {service.benefits.map((benefit, index) => (
+                      <li
+                        key={index}
+                        className="flex items-start gap-2 text-muted-foreground"
+                      >
+                        <span className="text-primary mt-1">•</span>
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            )}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
