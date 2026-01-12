@@ -1,7 +1,13 @@
 // components/service/ServiceDetailPage.tsx
 import { useParams, Link } from "react-router-dom";
 import { useService } from "@/hooks";
-import { Card, CardHeader, CardTitle, CardContent, Button } from "@/components/ui";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  Button,
+} from "@/components/ui";
 import { ArrowLeft } from "lucide-react";
 
 export function ServiceDetailPage() {

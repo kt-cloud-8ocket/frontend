@@ -16,7 +16,10 @@ export function HomeAbout() {
             {about.description}
           </p>
           <Button variant="outline" size="lg" asChild>
-            <Link to={about.cta.href} className="gap-2">
+            <Link
+              to={about.cta.href}
+              className="inline-flex items-center gap-2 whitespace-nowrap"
+            >
               {about.cta.label}
               <ArrowRight className="w-4 h-4" />
             </Link>

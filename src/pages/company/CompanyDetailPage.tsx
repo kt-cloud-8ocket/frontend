@@ -3,7 +3,13 @@ import { useParams, Link } from "react-router-dom";
 import { useCompany } from "@/hooks";
 import { ServiceList } from "@/components/service";
 import { WorkerList } from "@/components/worker";
-import { Card, CardHeader, CardTitle, CardContent, Button } from "@/components/ui";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  Button,
+} from "@/components/ui";
 import { ArrowLeft } from "lucide-react";
 
 export function CompanyDetailPage() {
