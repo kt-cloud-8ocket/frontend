@@ -31,13 +31,13 @@ export function Footer() {
               to="/"
               className="flex items-center space-x-2 text-lg font-bold"
             >
-              <span> 🚀8ocket</span>
+              <span>🍱 VendiChef</span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              혁신적인 기술로 더 나은 미래를 만들어갑니다.
+              식사와 생산을 데이터로 연결하는 플랫폼
             </p>
             <div className="text-sm text-muted-foreground space-y-1">
-              <p>📧 contact@8ocket.com</p>
+              <p>📧 contact@vendichef.com</p>
               <p>📞 02-1234-5678</p>
             </div>
           </div>
@@ -67,7 +67,7 @@ export function Footer() {
       <div className="border-t">
         <div className="container py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            &copy; {currentYear} 8ocket. All rights reserved.
+            &copy; {currentYear} VendiChef. All rights reserved.
           </p>
           <div className="flex items-center space-x-4 text-sm text-muted-foreground">
             <Link
