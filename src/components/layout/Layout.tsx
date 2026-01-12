@@ -9,9 +9,7 @@ export function Layout() {
     <div className="relative flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <div className="container py-6">
-          <Outlet />
-        </div>
+        <Outlet />
       </main>
       <Footer />
     </div>
