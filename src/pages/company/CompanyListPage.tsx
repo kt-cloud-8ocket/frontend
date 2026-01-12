@@ -1,26 +1,8 @@
 // pages/company/CompanyListPage.tsx
 import { CompanyList } from "@/components/company";
-import { useCompanies } from "@/hooks";
+import { mockCompanies } from "@/mocks/companies";
 
 export function CompanyListPage() {
-  const { companies, loading, error } = useCompanies();
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-[40vh]">
-        <p className="text-muted-foreground">로딩 중...</p>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="flex items-center justify-center min-h-[40vh]">
-        <p className="text-destructive">{error}</p>
-      </div>
-    );
-  }
-
   return (
     <>
       {/* Hero 섹션 */}
@@ -40,7 +22,7 @@ export function CompanyListPage() {
       {/* 목록 섹션 */}
       <section className="py-12 md:py-16">
         <div className="container">
-          <CompanyList companies={companies} />
+          <CompanyList companies={mockCompanies} />
         </div>
       </section>
     </>

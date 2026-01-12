@@ -1,28 +1,10 @@
 import { ServiceList } from "@/components/service";
-import { useServices } from "@/hooks";
+import { mockServices } from "@/mocks/services";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export function ServiceListPage() {
-  const { services, loading, error } = useServices();
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-[40vh]">
-        <p className="text-muted-foreground">로딩 중...</p>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="flex items-center justify-center min-h-[40vh]">
-        <p className="text-destructive">{error}</p>
-      </div>
-    );
-  }
-
-  const consumerServices = services.filter((s) => s.category === "consumer");
-  const businessServices = services.filter((s) => s.category === "business");
+  const consumerServices = mockServices.filter((s) => s.category === "consumer");
+  const businessServices = mockServices.filter((s) => s.category === "business");
 
   return (
     <>
