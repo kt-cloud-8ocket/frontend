@@ -32,7 +32,9 @@ export function AboutVisionMission() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-muted-foreground">{mission.description}</p>
+            <p className="text-muted-foreground md:whitespace-pre-line leading-relaxed">
+              {mission.description}
+            </p>
           </CardContent>
         </Card>
       </div>

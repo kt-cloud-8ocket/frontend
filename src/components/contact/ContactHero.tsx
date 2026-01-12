@@ -8,8 +8,10 @@ export function ContactHero() {
 
   return (
     <Section spacing="md" className="text-center">
-      <h1 className="text-3xl font-bold">{hero.title}</h1>
-      <p className="text-muted-foreground mt-2">{hero.subtitle}</p>
+      <h1 className="text-2xl sm:text-3xl font-bold">{hero.title}</h1>
+      <p className="text-muted-foreground mt-2 md:whitespace-pre-line leading-relaxed">
+        {hero.subtitle}
+      </p>
     </Section>
   );
 }

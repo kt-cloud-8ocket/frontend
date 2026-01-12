@@ -7,8 +7,10 @@ export function HomeAbout() {
 
   return (
     <Section background="muted" spacing="lg" className="text-center">
-      <h2 className="text-3xl font-bold mb-6">{about.title}</h2>
-      <p className="text-muted-foreground max-w-2xl mx-auto">
+      <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
+        {about.title}
+      </h2>
+      <p className="text-muted-foreground mx-auto md:whitespace-pre-line leading-relaxed">
         {about.description}
       </p>
       <Button className="mt-8" variant="outline" asChild>
