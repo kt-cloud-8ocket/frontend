@@ -1,6 +1,7 @@
 // 푸터 레이아웃 컴포넌트
 
 import { Link } from "react-router-dom";
+import { Leaf } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -31,7 +32,8 @@ export function Footer() {
               to="/"
               className="flex items-center space-x-2 text-lg font-bold"
             >
-              <span>🍱VendiChef</span>
+              <Leaf className="w-5 h-5" />
+              <span>VendiChef</span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               식사와 생산을 데이터로 연결하는 플랫폼

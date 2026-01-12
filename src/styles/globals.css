@@ -4,25 +4,32 @@
 
 /* Tailwind v4 테마 설정 */
 @theme {
-  --color-background: hsl(0 0% 100%);
-  --color-foreground: hsl(222.2 84% 4.9%);
-  --color-card: hsl(0 0% 100%);
-  --color-card-foreground: hsl(222.2 84% 4.9%);
-  --color-popover: hsl(0 0% 100%);
-  --color-popover-foreground: hsl(222.2 84% 4.9%);
-  --color-primary: hsl(221.2 83.2% 53.3%);
-  --color-primary-foreground: hsl(210 40% 98%);
-  --color-secondary: hsl(210 40% 96.1%);
-  --color-secondary-foreground: hsl(222.2 47.4% 11.2%);
-  --color-muted: hsl(210 40% 96.1%);
-  --color-muted-foreground: hsl(215.4 16.3% 46.9%);
-  --color-accent: hsl(210 40% 96.1%);
-  --color-accent-foreground: hsl(222.2 47.4% 11.2%);
-  --color-destructive: hsl(0 84.2% 60.2%);
-  --color-destructive-foreground: hsl(210 40% 98%);
-  --color-border: hsl(214.3 31.8% 91.4%);
-  --color-input: hsl(214.3 31.8% 91.4%);
-  --color-ring: hsl(221.2 83.2% 53.3%);
+  /* 커스텀 브랜드 색상 */
+  --color-primary: #245641;
+  --color-primary-foreground: #FCF9E0;
+  --color-secondary: #FCF9E0;
+  --color-secondary-foreground: #245641;
+  --color-tertiary: #E26931;
+  --color-tertiary-foreground: #FCF9E0;
+  --color-quinary: #D5F466;
+  --color-quinary-foreground: #245641;
+
+  /* 기본 색상 */
+  --color-background: #FCF9E0;
+  --color-foreground: #245641;
+  --color-card: #ffffff;
+  --color-card-foreground: #245641;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #245641;
+  --color-muted: #f5f2d8;
+  --color-muted-foreground: #5a7a6a;
+  --color-accent: #D5F466;
+  --color-accent-foreground: #245641;
+  --color-destructive: #E26931;
+  --color-destructive-foreground: #FCF9E0;
+  --color-border: #d4d1b8;
+  --color-input: #d4d1b8;
+  --color-ring: #245641;
 
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
@@ -37,25 +44,25 @@
 
 /* 다크모드 */
 .dark {
-  --color-background: hsl(222.2 84% 4.9%);
-  --color-foreground: hsl(210 40% 98%);
-  --color-card: hsl(222.2 84% 4.9%);
-  --color-card-foreground: hsl(210 40% 98%);
-  --color-popover: hsl(222.2 84% 4.9%);
-  --color-popover-foreground: hsl(210 40% 98%);
-  --color-primary: hsl(217.2 91.2% 59.8%);
-  --color-primary-foreground: hsl(222.2 47.4% 11.2%);
-  --color-secondary: hsl(217.2 32.6% 17.5%);
-  --color-secondary-foreground: hsl(210 40% 98%);
-  --color-muted: hsl(217.2 32.6% 17.5%);
-  --color-muted-foreground: hsl(215 20.2% 65.1%);
-  --color-accent: hsl(217.2 32.6% 17.5%);
-  --color-accent-foreground: hsl(210 40% 98%);
-  --color-destructive: hsl(0 62.8% 30.6%);
-  --color-destructive-foreground: hsl(210 40% 98%);
-  --color-border: hsl(217.2 32.6% 17.5%);
-  --color-input: hsl(217.2 32.6% 17.5%);
-  --color-ring: hsl(224.3 76.3% 48%);
+  --color-background: #1a3d2e;
+  --color-foreground: #FCF9E0;
+  --color-card: #245641;
+  --color-card-foreground: #FCF9E0;
+  --color-popover: #245641;
+  --color-popover-foreground: #FCF9E0;
+  --color-primary: #D5F466;
+  --color-primary-foreground: #245641;
+  --color-secondary: #2d6a52;
+  --color-secondary-foreground: #FCF9E0;
+  --color-muted: #2d6a52;
+  --color-muted-foreground: #b8d4c5;
+  --color-accent: #E26931;
+  --color-accent-foreground: #FCF9E0;
+  --color-destructive: #E26931;
+  --color-destructive-foreground: #FCF9E0;
+  --color-border: #3d7a62;
+  --color-input: #3d7a62;
+  --color-ring: #D5F466;
 }
 
 /* 기본 스타일 */

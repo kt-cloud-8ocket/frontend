@@ -1,6 +1,7 @@
 // 헤더 레이아웃 컴포넌트
 
 import { Link, useLocation } from "react-router-dom";
+import { Leaf } from "lucide-react";
 import { Button } from "@/components/ui";
 
 export function Header() {
@@ -27,7 +28,8 @@ export function Header() {
           to="/"
           className="flex items-center space-x-2 text-xl font-bold text-primary hover:opacity-80 transition-opacity"
         >
-          <span>🍱VendiChef</span>
+          <Leaf className="w-6 h-6" />
+          <span>VendiChef</span>
         </Link>
 
         {/* 네비게이션 */}
