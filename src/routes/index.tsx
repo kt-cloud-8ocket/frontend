@@ -7,6 +7,8 @@ import {
   NotFoundPage,
   AboutPage,
   ContactPage,
+  PrivacyPage,
+  TermsPage,
   CompanyListPage,
   CompanyDetailPage,
   ServiceListPage,
@@ -29,6 +31,14 @@ export const router = createBrowserRouter([
       {
         path: "contact",
         element: <ContactPage />,
+      },
+      {
+        path: "privacy",
+        element: <PrivacyPage />,
+      },
+      {
+        path: "terms",
+        element: <TermsPage />,
       },
       {
         path: "companies",
