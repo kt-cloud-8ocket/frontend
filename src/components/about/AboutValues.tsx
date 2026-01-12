@@ -9,7 +9,7 @@ export function AboutValues() {
   return (
     <Section spacing="lg">
       <h2 className="text-2xl font-bold text-center mb-8">{values.title}</h2>
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 gap-6">
         {values.items.map((value) => (
           <Card key={value.title} className="text-center p-6">
             <CardContent>

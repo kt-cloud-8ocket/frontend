@@ -31,7 +31,7 @@ export const homeContent = {
   },
 
   about: {
-    title: "왜 벤디셰프인가요?",
+    title: "왜 VendiChef인가요?",
     description:
       "자판기를 단순 판매 채널이 아닌 데이터 수집 노드로 활용해, 수요와 공급을 정확하게 연결합니다.",
     cta: { label: "더 알아보기", href: "/about" },
@@ -80,7 +80,7 @@ export const aboutContent = {
 
   history: {
     title: "연혁",
-    items: [{ year: "2024", event: "벤디셰프 팀 결성" }],
+    items: [{ year: "2026", event: "VendiChef 팀 결성" }],
   },
 
   story: {
