@@ -1,6 +1,6 @@
 # MindLog Frontend
 
-KT Cloud Tech Up 해커톤 프로젝트 - MindLog 프론트엔드
+KT Cloud Tech Up 프로젝트 - MindLog 프론트엔드
 
 ## 🛠 기술 스택
 
